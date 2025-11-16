@@ -3,8 +3,8 @@ from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome() # open Chrome, a web browser
 
-# driver.get("https://www.selenium.dev/selenium/web/web-form.html")
-driver.get("https://www.google.com") # requests.get("https://www.google.com")
+driver.get("https://www.selenium.dev/selenium/web/web-form.html")
+# driver.get("https://www.google.com") # requests.get("https://www.google.com")
 
 
 title = driver.title
@@ -35,16 +35,17 @@ print(driver.forward())
 driver.refresh() # refresh the current page
 print(driver.refresh())
 
-# driver.implicitly_wait(0.5)
+driver.implicitly_wait(0.5)
 #
-# text_box = driver.find_element(by=By.NAME, value="my-text")
-# submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
+text_box = driver.find_element(by=By.NAME, value="my-text")
+submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
 #
-# text_box.send_keys("Selenium")
-# submit_button.click()
+text_box.send_keys("Selenium")
+submit_button.click()
 #
-# message = driver.find_element(by=By.ID, value="message")
-# text = message.text
+message = driver.find_element(by=By.ID, value="message")
+text = message.text
+print(text)
 #
-# driver.quit()
+driver.quit()
 
